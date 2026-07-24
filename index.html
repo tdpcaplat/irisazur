@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iris Azur — Haute-Coiffure Nice | Carré d'Or</title>
+<meta name="description" content="Iris Azur, coiffeuse indépendante à Nice, Carré d'Or. Coupe, couleur, coiffure événementielle. Uniquement sur rendez-vous.">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-deep:#0A2E45;
+    --azure:#1E6FA8;
+    --azure-light:#4FA8D8;
+    --rose-gold:#C9A47C;
+    --rose-gold-light:#E4CBA8;
+    --ivory:#FAF6F0;
+    --ink:#17242E;
+    --ink-soft:#4B5A63;
+    --blush:#EFE1D3;
+    --line:rgba(23,36,46,0.1);
+    --radius:2px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--ivory);
+    color:var(--ink);
+    font-family:'Manrope',sans-serif;
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Fraunces',serif;
+    font-weight:500;
+    letter-spacing:-0.01em;
+    color:var(--navy-deep);
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .container{max-width:1140px;margin:0 auto;padding:0 28px;}
+  .eyebrow{
+    font-family:'Manrope',sans-serif;
+    font-size:12px;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--rose-gold);
+    font-weight:700;
+  }
+  :focus-visible{outline:2px solid var(--azure-light);outline-offset:3px;}
+
+  /* ---------- NAV ---------- */
+  .nav{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    background:rgba(10,46,69,0.0);
+    backdrop-filter:none;
+    transition:background .35s ease, box-shadow .35s ease, backdrop-filter .35s ease;
+    padding:18px 0;
+  }
+  .nav.scrolled{
+    background:rgba(250,246,240,0.92);
+    backdrop-filter:blur(10px);
+    box-shadow:0 1px 0 var(--line);
+    padding:12px 0;
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;}
+  .nav-brand{display:flex;align-items:center;gap:12px;}
+  .nav-brand img{width:40px;height:40px;border-radius:50%;transition:width .3s ease, height .3s ease;}
+  .nav.scrolled .nav-brand img{width:34px;height:34px;}
+  .nav-brand-text{
+    font-family:'Fraunces',serif;
+    font-size:17px;
+    letter-spacing:0.06em;
+    color:#fff;
+    transition:color .35s ease;
+  }
+  .nav.scrolled .nav-brand-text{color:var(--navy-deep);}
+  .nav-links{display:flex;align-items:center;gap:34px;}
+  .nav-links a{
+    font-size:13px;letter-spacing:0.08em;text-transform:uppercase;
+    color:rgba(255,255,255,0.88);font-weight:600;
+    transition:color .35s ease;
+    padding-bottom:2px;
+    border-bottom:1px solid transparent;
+  }
+  .nav.scrolled .nav-links a{color:var(--ink-soft);}
+  .nav-links a:hover{border-bottom-color:currentColor;}
+  .nav-cta{
+    background:var(--rose-gold);color:#fff !important;
+    padding:10px 20px;border-radius:var(--radius);
+    font-size:12px;letter-spacing:0.1em;
+  }
+  .nav-menu-btn{display:none;background:none;border:none;cursor:pointer;padding:6px;}
+  .nav-menu-btn span{display:block;width:22px;height:2px;background:#fff;margin:5px 0;transition:.3s;}
+  .nav.scrolled .nav-menu-btn span{background:var(--navy-deep);}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    min-height:100vh;
+    display:flex;align-items:center;justify-content:center;
+    background:radial-gradient(120% 100% at 50% 0%, #14507A 0%, var(--navy-deep) 55%, #071D2C 100%);
+    overflow:hidden;
+    text-align:center;
+    padding:140px 24px 0;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background-image:
+      radial-gradient(circle at 18% 22%, rgba(201,164,124,0.10) 0%, transparent 40%),
+      radial-gradient(circle at 82% 78%, rgba(79,168,216,0.14) 0%, transparent 45%);
+    pointer-events:none;
+  }
+  .hero-content{position:relative;z-index:2;max-width:760px;animation:heroIn 1.1s ease both;}
+  @keyframes heroIn{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+  .hero-logo{
+    width:104px;height:104px;border-radius:50%;
+    margin:0 auto 30px;
+    box-shadow:0 0 0 1px rgba(228,203,168,0.4), 0 20px 60px rgba(0,0,0,0.35);
+  }
+  .hero-eyebrow{
+    color:var(--rose-gold-light);font-size:12px;letter-spacing:0.3em;
+    text-transform:uppercase;font-weight:700;margin-bottom:18px;
+  }
+  .hero h1{
+    color:#fff;font-size:clamp(40px,7vw,68px);line-height:1.05;
+    font-weight:400;margin-bottom:20px;
+  }
+  .hero h1 em{font-style:italic;color:var(--rose-gold-light);}
+  .hero p{
+    color:rgba(255,255,255,0.78);font-size:17px;max-width:520px;
+    margin:0 auto 40px;font-weight:400;
+  }
+  .hero-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:16px 30px;border-radius:var(--radius);
+    font-size:13px;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;
+    transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+    cursor:pointer;border:none;
+  }
+  .btn-primary{background:var(--rose-gold);color:#fff;box-shadow:0 10px 30px rgba(201,164,124,0.35);}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(201,164,124,0.5);}
+  .btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.35);}
+  .btn-ghost:hover{border-color:#fff;transform:translateY(-2px);}
+
+  .hero-wave{position:absolute;bottom:-2px;left:0;width:100%;line-height:0;z-index:1;}
+  .hero-wave svg{width:100%;height:auto;display:block;}
+
+  /* ---------- SECTION SHARED ---------- */
+  section{padding:110px 0;}
+  .section-head{max-width:600px;margin:0 auto 56px;text-align:center;}
+  .section-head h2{font-size:clamp(30px,4vw,42px);margin-top:14px;font-weight:400;}
+  .section-head p{color:var(--ink-soft);margin-top:16px;font-size:16px;}
+
+  .iris-divider{width:40px;height:40px;margin:0 auto;opacity:0.85;color:var(--rose-gold);}
+
+  /* ---------- ABOUT ---------- */
+  .about{background:var(--ivory);}
+  .about-grid{
+    display:grid;grid-template-columns:0.9fr 1.1fr;gap:64px;align-items:center;
+  }
+  .about-frame{
+    position:relative;aspect-ratio:4/5;border-radius:var(--radius);
+    background:linear-gradient(160deg, var(--navy-deep), var(--azure) 60%, var(--azure-light));
+    display:flex;align-items:center;justify-content:center;
+    overflow:hidden;
+  }
+  .about-frame img{width:130px;height:130px;border-radius:50%;box-shadow:0 0 0 1px rgba(255,255,255,0.25);}
+  .about-frame::after{
+    content:"";position:absolute;inset:14px;border:1px solid rgba(255,255,255,0.25);pointer-events:none;
+  }
+  .about-text .eyebrow{margin-bottom:14px;display:block;}
+  .about-text h2{font-size:clamp(28px,3.6vw,38px);font-weight:400;margin-bottom:22px;}
+  .about-text p{color:var(--ink-soft);margin-bottom:18px;font-size:16px;}
+  .about-facts{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:32px;}
+  .about-fact{border-left:2px solid var(--rose-gold);padding-left:16px;}
+  .about-fact .num{font-family:'Fraunces',serif;font-size:22px;color:var(--navy-deep);display:block;}
+  .about-fact .lbl{font-size:12px;letter-spacing:0.06em;color:var(--ink-soft);text-transform:uppercase;}
+
+  /* ---------- PRESTATIONS ---------- */
+  .prestations{background:var(--blush);}
+  .p-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line);}
+  .p-card{
+    background:var(--ivory);padding:40px 34px;transition:background .3s ease;
+  }
+  .p-card:hover{background:#fff;}
+  .p-card .p-icon{width:30px;height:30px;color:var(--rose-gold);margin-bottom:22px;}
+  .p-card h3{font-size:21px;font-weight:500;margin-bottom:10px;}
+  .p-card p{color:var(--ink-soft);font-size:14.5px;margin-bottom:18px;}
+  .p-card .price{
+    font-size:12px;letter-spacing:0.08em;text-transform:uppercase;
+    color:var(--azure);font-weight:700;
+  }
+
+  /* ---------- GALERIE ---------- */
+  .galerie{background:var(--ivory);}
+  .g-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:12px;
+  }
+  .g-tile{
+    position:relative;overflow:hidden;border-radius:var(--radius);
+    background:linear-gradient(150deg,#12405F,var(--azure) 70%);
+    display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;
+  }
+  .g-tile:nth-child(3n+1){background:linear-gradient(150deg,var(--navy-deep),#1c5a80);}
+  .g-tile:nth-child(3n+2){background:linear-gradient(150deg,#2a6f98,var(--azure-light));}
+  .g-tile:nth-child(1){grid-column:span 2;grid-row:span 2;}
+  .g-tile svg{width:34px;height:34px;color:rgba(255,255,255,0.55);}
+  .g-tile span{color:rgba(255,255,255,0.55);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;text-align:center;padding:0 10px;}
+  .g-note{text-align:center;color:var(--ink-soft);font-size:13.5px;margin-top:26px;}
+
+  /* ---------- RENDEZ-VOUS ---------- */
+  .rdv{background:var(--navy-deep);position:relative;overflow:hidden;}
+  .rdv::before{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(circle at 85% 20%, rgba(79,168,216,0.18), transparent 55%);
+  }
+  .rdv-inner{position:relative;z-index:1;display:grid;grid-template-columns:0.9fr 1.1fr;gap:70px;align-items:start;}
+  .rdv-left .eyebrow{color:var(--rose-gold-light);}
+  .rdv-left h2{color:#fff;font-size:clamp(28px,3.6vw,38px);font-weight:400;margin:16px 0 20px;}
+  .rdv-left p{color:rgba(255,255,255,0.72);font-size:15.5px;margin-bottom:26px;}
+  .rdv-info{display:flex;flex-direction:column;gap:14px;}
+  .rdv-info-row{display:flex;align-items:center;gap:12px;color:rgba(255,255,255,0.85);font-size:14.5px;}
+  .rdv-info-row svg{width:18px;height:18px;color:var(--rose-gold-light);flex-shrink:0;}
+  .rdv-note{
+    margin-top:28px;padding:16px 18px;border:1px solid rgba(255,255,255,0.16);
+    border-radius:var(--radius);color:rgba(255,255,255,0.7);font-size:13px;letter-spacing:0.02em;
+  }
+
+  .form-card{background:var(--ivory);border-radius:var(--radius);padding:40px;}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;}
+  .field{display:flex;flex-direction:column;gap:8px;margin-bottom:18px;}
+  .field label{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-soft);font-weight:700;}
+  .field input,.field select,.field textarea{
+    border:1px solid var(--line);background:#fff;padding:13px 14px;
+    font-family:'Manrope',sans-serif;font-size:14.5px;color:var(--ink);border-radius:var(--radius);
+    transition:border-color .2s ease;
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--azure);outline:none;}
+  .field textarea{resize:vertical;min-height:90px;}
+  .form-submit{width:100%;justify-content:center;margin-top:6px;}
+  .form-fine{font-size:12px;color:var(--ink-soft);margin-top:14px;text-align:center;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:#071D2C;padding:60px 0 30px;}
+  .footer-grid{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.1);}
+  .footer-brand{display:flex;align-items:center;gap:14px;}
+  .footer-brand img{width:46px;height:46px;border-radius:50%;}
+  .footer-brand-name{font-family:'Fraunces',serif;color:#fff;font-size:19px;}
+  .footer-brand-sub{color:rgba(255,255,255,0.5);font-size:12.5px;letter-spacing:0.05em;margin-top:2px;}
+  .footer-cols{display:flex;gap:70px;flex-wrap:wrap;}
+  .footer-col h4{color:#fff;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px;font-weight:700;}
+  .footer-col a,.footer-col p{display:block;color:rgba(255,255,255,0.62);font-size:14px;margin-bottom:10px;}
+  .footer-col a:hover{color:var(--rose-gold-light);}
+  .footer-bottom{display:flex;justify-content:space-between;padding-top:26px;flex-wrap:wrap;gap:12px;}
+  .footer-bottom p{color:rgba(255,255,255,0.35);font-size:12.5px;}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:860px){
+    .nav-links{position:fixed;top:0;right:0;height:100vh;width:78%;max-width:320px;
+      background:var(--navy-deep);flex-direction:column;justify-content:center;align-items:flex-start;
+      padding:0 40px;gap:26px;transform:translateX(100%);transition:transform .35s ease;}
+    .nav-links.open{transform:translateX(0);}
+    .nav-links a{color:#fff;font-size:15px;}
+    .nav-menu-btn{display:block;}
+    .about-grid,.rdv-inner{grid-template-columns:1fr;}
+    .about-frame{max-width:320px;margin:0 auto;}
+    .p-grid{grid-template-columns:1fr;}
+    .g-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px;}
+    .g-tile:nth-child(1){grid-column:span 2;grid-row:span 1;}
+    .form-row{grid-template-columns:1fr;}
+    section{padding:76px 0;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="nav-brand">
+      <img src="assets/logo.png" alt="Iris Azur">
+      <span class="nav-brand-text">IRIS AZUR</span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">L'univers</a>
+      <a href="#prestations">Prestations</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#rdv">Rendez-vous</a>
+      <a href="#rdv" class="nav-cta">Réserver</a>
+    </div>
+    <button class="nav-menu-btn" id="menuBtn" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="top">
+  <div class="hero-content">
+    <img src="assets/logo.png" alt="Iris Azur — Haute-Coiffure Nice" class="hero-logo">
+    <p class="hero-eyebrow">Nice · Carré d'Or</p>
+    <h1>L'art de la coiffure,<br><em>sur mesure</em></h1>
+    <p>Iryna reçoit à Nice, en plein cœur du Carré d'Or, pour des créations capillaires pensées pour vous — coupe, couleur et coiffure d'exception, uniquement sur rendez-vous.</p>
+    <div class="hero-ctas">
+      <a href="#rdv" class="btn btn-primary">Prendre rendez-vous</a>
+      <a href="#galerie" class="btn btn-ghost">Voir les créations</a>
+    </div>
+  </div>
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path fill="#FAF6F0" d="M0,40 C240,90 480,0 720,30 C960,60 1200,100 1440,50 L1440,100 L0,100 Z"></path></svg>
+  </div>
+</header>
+
+<!-- ================= A PROPOS ================= -->
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-frame">
+      <img src="assets/logo.png" alt="Iris Azur">
+    </div>
+    <div class="about-text">
+      <span class="eyebrow">L'univers Iris Azur</span>
+      <h2>Une coiffeuse, une adresse confidentielle</h2>
+      <p>Installée dans le quartier du Carré d'Or à Nice, Iryna accompagne chaque cliente dans une expérience capillaire personnalisée, loin de l'agitation des salons classiques.</p>
+      <p>Chaque rendez-vous est pensé comme un moment privilégié : écoute, conseil et geste précis, au service d'un résultat naturel et durable.</p>
+      <div class="about-facts">
+        <div class="about-fact">
+          <span class="num">100%</span>
+          <span class="lbl">Sur rendez-vous</span>
+        </div>
+        <div class="about-fact">
+          <span class="num">Carré d'Or</span>
+          <span class="lbl">Centre-ville de Nice</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRESTATIONS ================= -->
+<section class="prestations" id="prestations">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Savoir-faire</span>
+      <h2>Prestations</h2>
+      <p>Une sélection de services adaptés à chaque chevelure. Les tarifs sont communiqués sur demande, selon la longueur et la nature de vos cheveux.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="p-grid">
+      <div class="p-card">
+        <svg class="p-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3c-1.5 2-2 4-2 6a4 4 0 108 0c0-2-.5-4-2-6"/><path d="M6 15c0 4 2.5 6 6 6s6-2 6-6"/></svg>
+        <h3>Coupe &amp; Brushing</h3>
+        <p>Coupe personnalisée selon votre morphologie, coiffage et finitions soignées.</p>
+        <span class="price">Tarif sur demande</span>
+      </div>
+      <div class="p-card">
+        <svg class="p-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="8"/><path d="M12 4v16M4 12h16"/></svg>
+        <h3>Couleur &amp; Mèches</h3>
+        <p>Coloration sur-mesure, balayage et mèches pour une lumière naturelle.</p>
+        <span class="price">Tarif sur demande</span>
+      </div>
+      <div class="p-card">
+        <svg class="p-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 20c2-4 4-6 8-6s6 2 8 6"/><circle cx="12" cy="8" r="4"/></svg>
+        <h3>Coiffure Événementielle</h3>
+        <p>Chignons et coiffures pour mariages, soirées et occasions particulières.</p>
+        <span class="price">Tarif sur demande</span>
+      </div>
+      <div class="p-card">
+        <svg class="p-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        <h3>Soin &amp; Fibre Capillaire</h3>
+        <p>Diagnostic et soins ciblés pour restaurer la santé de vos cheveux.</p>
+        <span class="price">Tarif sur demande</span>
+      </div>
+      <div class="p-card">
+        <svg class="p-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2l1.8 5.6L19 9l-5.2 1.4L12 16l-1.8-5.6L5 9l5.2-1.4z"/></svg>
+        <h3>Extensions</h3>
+        <p>Pose d'extensions pour longueur et volume, effet naturel garanti.</p>
+        <span class="price">Tarif sur demande</span>
+      </div>
+      <div class="p-card">
+        <svg class="p-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 4v16"/></svg>
+        <h3>Conseil Image</h3>
+        <p>Un échange personnalisé pour définir la coiffure la plus adaptée à vous.</p>
+        <span class="price">Offert avec RDV</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALERIE ================= -->
+<section class="galerie" id="galerie">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Réalisations</span>
+      <h2>Galerie</h2>
+      <p>Un aperçu du travail d'Iryna. Cette galerie sera complétée avec les photos de réalisations à venir.</p>
+    </div>
+    <div class="g-grid">
+      <div class="g-tile">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0112 6a5.5 5.5 0 019.5 6c-2.5 4.5-9.5 9-9.5 9z" opacity="0"/><path d="M12 3c-1.6 2.1-2.2 4.3-2.2 6.4a4.2 4.2 0 008.4 0c0-2.1-.6-4.3-2.2-6.4M7 15c0 4.2 2.6 6.3 6.3 6.3"/></svg>
+        <span>Photo à venir</span>
+      </div>
+      <div class="g-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 3c-1.6 2.1-2.2 4.3-2.2 6.4a4.2 4.2 0 008.4 0c0-2.1-.6-4.3-2.2-6.4M7 15c0 4.2 2.6 6.3 6.3 6.3"/></svg><span>Photo à venir</span></div>
+      <div class="g-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 3c-1.6 2.1-2.2 4.3-2.2 6.4a4.2 4.2 0 008.4 0c0-2.1-.6-4.3-2.2-6.4M7 15c0 4.2 2.6 6.3 6.3 6.3"/></svg><span>Photo à venir</span></div>
+      <div class="g-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 3c-1.6 2.1-2.2 4.3-2.2 6.4a4.2 4.2 0 008.4 0c0-2.1-.6-4.3-2.2-6.4M7 15c0 4.2 2.6 6.3 6.3 6.3"/></svg><span>Photo à venir</span></div>
+      <div class="g-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 3c-1.6 2.1-2.2 4.3-2.2 6.4a4.2 4.2 0 008.4 0c0-2.1-.6-4.3-2.2-6.4M7 15c0 4.2 2.6 6.3 6.3 6.3"/></svg><span>Photo à venir</span></div>
+      <div class="g-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 3c-1.6 2.1-2.2 4.3-2.2 6.4a4.2 4.2 0 008.4 0c0-2.1-.6-4.3-2.2-6.4M7 15c0 4.2 2.6 6.3 6.3 6.3"/></svg><span>Photo à venir</span></div>
+    </div>
+    <p class="g-note">Suivez les dernières réalisations sur Instagram <a href="https://instagram.com/iris_azur_nice" target="_blank" rel="noopener" style="color:var(--azure);font-weight:700;">@iris_azur_nice</a></p>
+  </div>
+</section>
+
+<!-- ================= RENDEZ-VOUS ================= -->
+<section class="rdv" id="rdv">
+  <div class="container rdv-inner">
+    <div class="rdv-left">
+      <span class="eyebrow">Réservation</span>
+      <h2>Prendre rendez-vous</h2>
+      <p>Complétez le formulaire : votre demande sera transmise directement par WhatsApp pour confirmation rapide.</p>
+      <div class="rdv-info">
+        <div class="rdv-info-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.7a2 2 0 01-.4 2.1L8 9.9a16 16 0 006 6l1.4-1.3a2 2 0 012.1-.4c.9.3 1.8.5 2.7.6a2 2 0 011.8 2z"/></svg>
+          <span>07 49 72 71 87</span>
+        </div>
+        <div class="rdv-info-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
+          <span>contact@irisazur.com</span>
+        </div>
+        <div class="rdv-info-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Carré d'Or, Nice centre</span>
+        </div>
+      </div>
+      <div class="rdv-note">Salon reçu uniquement sur rendez-vous — aucune visite sans confirmation préalable.</div>
+    </div>
+
+    <form class="form-card" id="rdvForm">
+      <div class="form-row">
+        <div class="field">
+          <label for="nom">Nom</label>
+          <input type="text" id="nom" name="nom" required placeholder="Votre nom">
+        </div>
+        <div class="field">
+          <label for="tel">Téléphone</label>
+          <input type="tel" id="tel" name="tel" required placeholder="06 00 00 00 00">
+        </div>
+      </div>
+      <div class="field">
+        <label for="prestation">Prestation souhaitée</label>
+        <select id="prestation" name="prestation">
+          <option>Coupe &amp; Brushing</option>
+          <option>Couleur &amp; Mèches</option>
+          <option>Coiffure Événementielle</option>
+          <option>Soin &amp; Fibre Capillaire</option>
+          <option>Extensions</option>
+          <option>Autre / Conseil</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <div class="field">
+          <label for="date">Date souhaitée</label>
+          <input type="date" id="date" name="date">
+        </div>
+        <div class="field">
+          <label for="heure">Heure souhaitée</label>
+          <input type="time" id="heure" name="heure">
+        </div>
+      </div>
+      <div class="field">
+        <label for="message">Message (optionnel)</label>
+        <textarea id="message" name="message" placeholder="Précisions sur votre demande..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary form-submit">Envoyer via WhatsApp</button>
+      <p class="form-fine">Vous serez redirigé(e) vers WhatsApp avec votre demande pré-remplie.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Iris Azur">
+        <div>
+          <div class="footer-brand-name">IRIS AZUR</div>
+          <div class="footer-brand-sub">Haute-Coiffure · Nice</div>
+        </div>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="tel:+33749727187">07 49 72 71 87</a>
+          <a href="mailto:contact@irisazur.com">contact@irisazur.com</a>
+          <p>Carré d'Or, Nice</p>
+        </div>
+        <div class="footer-col">
+          <h4>Suivre</h4>
+          <a href="https://instagram.com/iris_azur_nice" target="_blank" rel="noopener">Instagram — @iris_azur_nice</a>
+          <a href="https://wa.me/33749727187" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <a href="#about">L'univers</a>
+          <a href="#prestations">Prestations</a>
+          <a href="#rdv">Rendez-vous</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Iris Azur — Haute-Coiffure Nice. Uniquement sur rendez-vous.</p>
+      <p>Site créé sur mesure.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Nav scroll state
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // Mobile menu
+  const menuBtn = document.getElementById('menuBtn');
+  const navLinks = document.getElementById('navLinks');
+  menuBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  // WhatsApp form
+  const WHATSAPP_NUMBER = "33749727187"; // format international sans le 0 initial
+  const form = document.getElementById('rdvForm');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const nom = document.getElementById('nom').value.trim();
+    const tel = document.getElementById('tel').value.trim();
+    const prestation = document.getElementById('prestation').value;
+    const date = document.getElementById('date').value;
+    const heure = document.getElementById('heure').value;
+    const message = document.getElementById('message').value.trim();
+
+    let text = `Bonjour Iryna, je souhaite prendre rendez-vous.\n`;
+    text += `Nom : ${nom}\n`;
+    text += `Téléphone : ${tel}\n`;
+    text += `Prestation : ${prestation}\n`;
+    if (date) text += `Date souhaitée : ${date}\n`;
+    if (heure) text += `Heure souhaitée : ${heure}\n`;
+    if (message) text += `Message : ${message}\n`;
+
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank');
+  });
+</script>
+
+</body>
+</html>
