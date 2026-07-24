@@ -145,10 +145,14 @@
   }
   .nav.scrolled .nav-links a{color:var(--ink-soft);}
   .nav-links a:hover{border-bottom-color:currentColor;}
-  .nav-cta{
+  .nav-links a.nav-cta{
     background:var(--rose-gold);color:#fff !important;
     padding:10px 20px;border-radius:var(--radius);
     font-size:12px;letter-spacing:0.1em;
+    border:none !important;line-height:1;
+    display:inline-flex;align-items:center;justify-content:center;
+    align-self:center;
+    height:36px;
   }
   .nav-menu-btn{display:none;background:none;border:none;cursor:pointer;padding:6px;}
   .nav-menu-btn span{display:block;width:22px;height:2px;background:#fff;margin:5px 0;transition:.3s;}
@@ -172,7 +176,7 @@
     background:radial-gradient(120% 100% at 50% 0%, #14507A 0%, var(--navy-deep) 55%, #071D2C 100%);
     overflow:hidden;
     text-align:center;
-    padding:140px 24px 0;
+    padding:90px 24px 0;
   }
   .hero::before{
     content:"";position:absolute;inset:0;
@@ -181,8 +185,8 @@
       radial-gradient(circle at 82% 78%, rgba(79,168,216,0.14) 0%, transparent 45%);
     pointer-events:none;
   }
-  .hero-content{position:relative;z-index:2;max-width:760px;animation:heroIn 1.1s ease both;}
-  @keyframes heroIn{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+  .hero-content{position:relative;z-index:2;max-width:760px;transform:translateY(-20%);animation:heroIn 1.1s ease both;}
+  @keyframes heroIn{from{opacity:0;transform:translateY(calc(-20% + 18px));}to{opacity:1;transform:translateY(-20%);}}
   .hero-logo{
     width:104px;height:104px;border-radius:50%;
     margin:0 auto 30px;
@@ -214,8 +218,12 @@
   .btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.35);}
   .btn-ghost:hover{border-color:#fff;transform:translateY(-2px);}
 
-  .hero-wave{position:absolute;bottom:-2px;left:0;width:100%;line-height:0;z-index:1;}
+  .hero-wave{position:absolute;bottom:-2px;left:0;width:100%;line-height:0;z-index:2;}
   .hero-wave svg{width:100%;height:auto;display:block;}
+  .hero-bg{position:absolute;inset:0;z-index:1;overflow:hidden;}
+  .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 45%;opacity:0.5;mix-blend-mode:screen;transform:translate(5%,30%);animation:heroBgReveal 1.8s cubic-bezier(.22,.9,.3,1) both;}
+  @keyframes heroBgReveal{from{transform:translate(5%,100%);}to{transform:translate(5%,30%);}}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 100% at 50% 0%, #14507A 0%, var(--navy-deep) 55%, #071D2C 100%);opacity:0.35;}
 
   /* ---------- SECTION SHARED ---------- */
   section{padding:110px 0;}
@@ -286,7 +294,7 @@
     content:"";position:absolute;inset:0;
     background:radial-gradient(circle at 85% 20%, rgba(79,168,216,0.18), transparent 55%);
   }
-  .rdv-inner{position:relative;z-index:1;display:grid;grid-template-columns:0.9fr 1.1fr;gap:70px;align-items:start;}
+  .rdv-inner{position:relative;z-index:1;display:grid;grid-template-columns:0.9fr 1.1fr;gap:70px;align-items:center;}
   .rdv-left .eyebrow{color:var(--rose-gold-light);}
   .rdv-left h2{color:#fff;font-size:clamp(28px,3.6vw,38px);font-weight:400;margin:16px 0 20px;}
   .rdv-left p{color:rgba(255,255,255,0.72);font-size:15.5px;margin-bottom:26px;}
@@ -361,8 +369,8 @@
       <a href="#rdv" class="nav-cta">Réserver</a>
       <div class="lang-switch">
         <a href="/" class="active">FR</a><span>·</span>
-        <a href="/en/">EN</a><span>·</span>
-        <a href="/ru/">RU</a>
+        <a href="/ru/">RU</a><span>·</span>
+        <a href="/en/">EN</a>
       </div>
     </div>
     <button class="nav-menu-btn" id="menuBtn" aria-label="Ouvrir le menu">
@@ -385,6 +393,9 @@
   </div>
   <div class="hero-wave">
     <svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path fill="#FAF6F0" d="M0,40 C240,90 480,0 720,30 C960,60 1200,100 1440,50 L1440,100 L0,100 Z"></path></svg>
+  </div>
+  <div class="hero-bg">
+    <img src="assets/promenade-des-anglais.png" alt="Illustration de la Promenade des Anglais à Nice">
   </div>
 </header>
 
