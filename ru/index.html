@@ -150,6 +150,8 @@
     background:var(--rose-gold);color:#fff !important;
     padding:10px 20px;border-radius:var(--radius);
     font-size:12px;letter-spacing:0.1em;
+    border:none !important;line-height:1;
+    display:inline-flex;align-items:center;
   }
   .nav-menu-btn{display:none;background:none;border:none;cursor:pointer;padding:6px;}
   .nav-menu-btn span{display:block;width:22px;height:2px;background:#fff;margin:5px 0;transition:.3s;}
@@ -173,7 +175,7 @@
     background:radial-gradient(120% 100% at 50% 0%, #14507A 0%, var(--navy-deep) 55%, #071D2C 100%);
     overflow:hidden;
     text-align:center;
-    padding:140px 24px 0;
+    padding:90px 24px 0;
   }
   .hero::before{
     content:"";position:absolute;inset:0;
@@ -362,8 +364,8 @@
       <a href="#rdv" class="nav-cta">Записаться</a>
       <div class="lang-switch">
         <a href="/">FR</a><span>·</span>
-        <a href="/en/">EN</a><span>·</span>
-        <a href="/ru/" class="active">RU</a>
+        <a href="/ru/" class="active">RU</a><span>·</span>
+        <a href="/en/">EN</a>
       </div>
     </div>
     <button class="nav-menu-btn" id="menuBtn" aria-label="Открыть меню">
