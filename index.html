@@ -9,7 +9,7 @@
 </template>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Coiffeuse Nice Carré d'Or | Iris Azur assets/— Haute-Coiffure sur rendez-vous</title>
+<title>Coiffeuse Nice Carré d'Or | Iris Azur — Haute-Coiffure sur rendez-vous</title>
 <meta name="description" content="Coiffeuse indépendante à Nice, Carré d'Or. Coupe, couleur, mèches, coiffure événementielle et extensions. Iris Azur reçoit uniquement sur rendez-vous, réservation rapide par WhatsApp.">
 <meta name="keywords" content="coiffure Nice, coiffeuse Nice, salon coiffure Carré d'Or, coiffeuse indépendante Nice, coloration Nice, coiffure événementielle Nice">
 <meta name="robots" content="index, follow">
@@ -304,6 +304,12 @@
   }
   .g-zoom-icon svg{width:16px;height:16px;color:#fff;}
   .g-tile.photo:hover .g-zoom-icon,.g-tile.photo:focus-visible .g-zoom-icon{opacity:1;transform:translateY(0);}
+  .g-tile.photo .g-caption{
+    position:absolute;left:0;right:0;bottom:0;padding:22px 14px 12px;
+    background:linear-gradient(to top,rgba(7,29,44,0.88),rgba(7,29,44,0));
+    color:#fff;font-size:12.5px;letter-spacing:0.02em;text-transform:none;text-align:left;
+    font-weight:500;line-height:1.35;pointer-events:none;
+  }
   .g-play-icon{
     position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
     background:rgba(10,46,69,0.25);
@@ -557,54 +563,155 @@
     <div class="g-grid" id="gGrid">
       <div class="g-tile photo" data-full="gallery/look-01-full.jpg" tabindex="0" role="button" aria-label="Agrandir la photo 1">
         <img src="gallery/look-01-thumb.jpg" loading="lazy" alt="Balayage blond naturel, vue de dos — réalisation Iris Azur">
+        <span class="g-caption">Balayage main levée, blond naturel</span>
         <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
       </div>
       <div class="g-tile photo" data-full="gallery/look-02-full.jpg" tabindex="0" role="button" aria-label="Agrandir la photo 2">
         <img src="gallery/look-02-thumb.jpg" loading="lazy" alt="Coiffure lisse et brillante, vue de profil — réalisation Iris Azur">
+        <span class="g-caption">Brushing lissant, finition miroir</span>
         <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
       </div>
       <div class="g-tile photo" data-full="gallery/look-03-full.jpg" tabindex="0" role="button" aria-label="Agrandir la photo 3">
         <img src="gallery/look-03-thumb.jpg" loading="lazy" alt="Blond froid lumineux, vue de dos — réalisation Iris Azur">
+        <span class="g-caption">Coloration blond froid, patine lumineuse</span>
         <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
       </div>
       <div class="g-tile photo" data-full="gallery/look-04-full.jpg" tabindex="0" role="button" aria-label="Agrandir la photo 4">
         <img src="gallery/look-04-thumb.jpg" loading="lazy" alt="Balayage ondulé brun et miel, vue de dos — réalisation Iris Azur">
+        <span class="g-caption">Balayage brun-miel, ondulations au fer</span>
         <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
       </div>
       <div class="g-tile photo" data-full="gallery/look-05-full.jpg" tabindex="0" role="button" aria-label="Agrandir la photo 5">
         <img src="gallery/look-05-thumb.jpg" loading="lazy" alt="Coiffure de soirée bouclée, dégradé blond doré — réalisation Iris Azur">
-        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
-      </div>
-      <div class="g-tile photo" data-full="gallery/look-06-full.jpg" tabindex="0" role="button" aria-label="Agrandir la photo 6">
-        <img src="gallery/look-06-thumb.jpg" loading="lazy" alt="Tresses colorées lilas et rose, vue de dos — réalisation Iris Azur">
+        <span class="g-caption">Boucles de soirée, dégradé blond doré</span>
         <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
       </div>
       <div class="g-tile photo" data-full="gallery/look-07-full.jpg" tabindex="0" role="button" aria-label="Agrandir la photo 7">
         <img src="gallery/look-07-thumb.jpg" loading="lazy" alt="Avant / après brushing lissé et boucles brunes — réalisation Iris Azur">
+        <span class="g-caption">Avant / après : lissage puis boucles au fer</span>
         <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
       </div>
       <div class="g-tile photo" data-full="gallery/look-08-full.jpg" tabindex="0" role="button" aria-label="Agrandir la photo 8">
         <img src="gallery/look-08-thumb.jpg" loading="lazy" alt="Carré long brun glacé, vue de profil — réalisation Iris Azur">
+        <span class="g-caption">Coupe carré long, coloration brun glacé</span>
         <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
       </div>
       <div class="g-tile photo" data-full="gallery/look-09-full.jpg" tabindex="0" role="button" aria-label="Agrandir la photo 9">
         <img src="gallery/look-09-thumb.jpg" loading="lazy" alt="Avant / après blond froid balayage, vue de dos — réalisation Iris Azur">
+        <span class="g-caption">Avant / après : balayage blond froid</span>
         <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
       </div>
       <div class="g-tile photo" data-full="gallery/look-10-full.jpg" tabindex="0" role="button" aria-label="Agrandir la photo 10">
         <img src="gallery/look-10-thumb.jpg" loading="lazy" alt="Avant / après balayage brun-caramel dégradé, vue de dos — réalisation Iris Azur">
+        <span class="g-caption">Avant / après : balayage brun-caramel dégradé</span>
         <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
       </div>
       <div class="g-tile photo" data-full="gallery/look-11-full.jpg" tabindex="0" role="button" aria-label="Agrandir la photo 11">
         <img src="gallery/look-11-thumb.jpg" loading="lazy" alt="Coiffure blond doré, profils avec coiffure demi-attachée — réalisation Iris Azur">
+        <span class="g-caption">Coloration blond doré, coiffure demi-attachée</span>
         <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
       </div>
       <div class="g-tile photo" data-full="gallery/look-12-full.jpg" tabindex="0" role="button" aria-label="Agrandir la photo 12">
         <img src="gallery/look-12-thumb.jpg" loading="lazy" alt="Blond platine carré, finition au peigne — réalisation Iris Azur">
+        <span class="g-caption">Décoloration platine, coupe carré</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="gallery/look-06-full.jpg" tabindex="0" role="button" aria-label="Agrandir la photo 13">
+        <img src="gallery/look-06-thumb.jpg" loading="lazy" alt="Tresses colorées lilas et rose, vue de dos — réalisation Iris Azur">
+        <span class="g-caption">Tresses créatives, coloration lilas et rose</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="gallery/look-14-full.jpg" tabindex="0" role="button" aria-label="Agrandir la photo 14">
+        <img src="gallery/look-14-thumb.jpg" loading="lazy" alt="Blond balayage, vue de dos — réalisation Iris Azur">
+        <span class="g-caption">Balayage blond, brushing brillant</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="gallery/look-15-full.jpg" tabindex="0" role="button" aria-label="Agrandir la photo 15">
+        <img src="gallery/look-15-thumb.jpg" loading="lazy" alt="Tresses collées enfant, vue de dessus — réalisation Iris Azur">
+        <span class="g-caption">Tresses collées, coiffure enfant</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="gallery/look-16-full.jpg" tabindex="0" role="button" aria-label="Agrandir la photo 16">
+        <img src="gallery/look-16-thumb.jpg" loading="lazy" alt="Blond ondulé, vue de dos — réalisation Iris Azur">
+        <span class="g-caption">Brushing ondulé, blond naturel</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="gallery/look-17-full.jpg" tabindex="0" role="button" aria-label="Agrandir la photo 17">
+        <img src="gallery/look-17-thumb.jpg" loading="lazy" alt="Cheveux lissés, balayage discret, vue de profil — réalisation Iris Azur">
+        <span class="g-caption">Lissage brillance, balayage discret</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="gallery/look-18-full.jpg" tabindex="0" role="button" aria-label="Agrandir la photo 18">
+        <img src="gallery/look-18-thumb.jpg" loading="lazy" alt="Coupe dégradée brune, vue de dos — réalisation Iris Azur">
+        <span class="g-caption">Coupe dégradée, brushing volume</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="gallery/look-19-full.jpg" tabindex="0" role="button" aria-label="Agrandir la photo 19">
+        <img src="gallery/look-19-thumb.jpg" loading="lazy" alt="Balayage caramel ondulé, vue de profil — réalisation Iris Azur">
+        <span class="g-caption">Balayage caramel, ondulations</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="gallery/look-20-full.jpg" tabindex="0" role="button" aria-label="Agrandir la photo 20">
+        <img src="gallery/look-20-thumb.jpg" loading="lazy" alt="Blond mèches, coupe dégradée, vue de dos — réalisation Iris Azur">
+        <span class="g-caption">Balayage blond, coupe dégradée</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="gallery/look-21-full.jpg" tabindex="0" role="button" aria-label="Agrandir la photo 21">
+        <img src="gallery/look-21-thumb.jpg" loading="lazy" alt="Coloration ombré blond, vue de dos — réalisation Iris Azur">
+        <span class="g-caption">Coloration ombré, brushing lissé</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="gallery/look-22-full.jpg" tabindex="0" role="button" aria-label="Agrandir la photo 22">
+        <img src="gallery/look-22-thumb.jpg" loading="lazy" alt="Balayage blond, vue de profil — réalisation Iris Azur">
+        <span class="g-caption">Balayage blond, lissage brillance</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="gallery/look-23-full.jpg" tabindex="0" role="button" aria-label="Agrandir la photo 23">
+        <img src="gallery/look-23-thumb.jpg" loading="lazy" alt="Blond froid lissé, vue de profil — réalisation Iris Azur">
+        <span class="g-caption">Coloration blond froid, lissage soyeux</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="gallery/look-24-full.jpg" tabindex="0" role="button" aria-label="Agrandir la photo 24">
+        <img src="gallery/look-24-thumb.jpg" loading="lazy" alt="Tresses plaquées enfant, vue de dos — réalisation Iris Azur">
+        <span class="g-caption">Tresses plaquées, coiffure enfant</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="gallery/look-25-full.jpg" tabindex="0" role="button" aria-label="Agrandir la photo 25">
+        <img src="gallery/look-25-thumb.jpg" loading="lazy" alt="Coupe carré blond doré, vue de dos — réalisation Iris Azur">
+        <span class="g-caption">Coupe carré, coloration blond doré</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="gallery/look-26-full.jpg" tabindex="0" role="button" aria-label="Agrandir la photo 26">
+        <img src="gallery/look-26-thumb.jpg" loading="lazy" alt="Balayage beige, longueur lissée, vue de dos — réalisation Iris Azur">
+        <span class="g-caption">Balayage beige, lissage longueur</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="gallery/look-27-full.jpg" tabindex="0" role="button" aria-label="Agrandir la photo 27">
+        <img src="gallery/look-27-thumb.jpg" loading="lazy" alt="Coupe dégradée châtain, vue de dos — réalisation Iris Azur">
+        <span class="g-caption">Coupe dégradée, brushing volume châtain</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="gallery/look-28-full.jpg" tabindex="0" role="button" aria-label="Agrandir la photo 28">
+        <img src="gallery/look-28-thumb.jpg" loading="lazy" alt="Coloration cuivrée, coupe dégradée, vue de profil — réalisation Iris Azur">
+        <span class="g-caption">Coloration cuivrée, coupe dégradée</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="gallery/look-29-full.jpg" tabindex="0" role="button" aria-label="Agrandir la photo 29">
+        <img src="gallery/look-29-thumb.jpg" loading="lazy" alt="Coupe carré plongeant, blond platine, vue de dos — réalisation Iris Azur">
+        <span class="g-caption">Coupe carré plongeant, blond platine</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="gallery/look-30-full.jpg" tabindex="0" role="button" aria-label="Agrandir la photo 30">
+        <img src="gallery/look-30-thumb.jpg" loading="lazy" alt="Coupe dégradée brune, vue de profil — réalisation Iris Azur">
+        <span class="g-caption">Coupe dégradée, brushing brillance brune</span>
         <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
       </div>
       <div class="g-tile photo video" data-video="gallery/look-13.mp4" tabindex="0" role="button" aria-label="Voir la vidéo">
         <video src="gallery/look-13.mp4" muted playsinline preload="metadata"></video>
+        <span class="g-play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+      </div>
+      <div class="g-tile photo video" data-video="gallery/look-14.mp4" tabindex="0" role="button" aria-label="Voir la vidéo">
+        <video src="gallery/look-14.mp4" muted playsinline preload="metadata"></video>
         <span class="g-play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
       </div>
     </div>
