@@ -243,10 +243,11 @@
 
   .hero-wave{position:absolute;bottom:-2px;left:0;width:100%;line-height:0;z-index:2;}
   .hero-wave svg{width:100%;height:auto;display:block;}
-  .hero-bg{position:absolute;inset:0;z-index:1;overflow:hidden;}
-  .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 45%;opacity:0.5;mix-blend-mode:screen;transform:translate(5%,30%);animation:heroBgReveal 1.8s cubic-bezier(.22,.9,.3,1) both;}
-  @keyframes heroBgReveal{from{transform:translate(5%,100%);}to{transform:translate(5%,30%);}}
-  .hero-bg::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 100% at 50% 0%, #14507A 0%, var(--navy-deep) 55%, #071D2C 100%);opacity:0.35;}
+  .hero-bg{position:absolute;inset:0;z-index:1;overflow:hidden;background:var(--navy-deep);}
+  .hero-bg::after{content:"";position:absolute;inset:0;z-index:5;background:rgba(7,29,44,0.12);}
+  .hero-bg video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%;opacity:0;transition:opacity 1.2s ease;}
+  .hero-bg video.active{opacity:1;animation:heroBgReveal 1.8s cubic-bezier(.22,.9,.3,1) both;}
+  @keyframes heroBgReveal{from{opacity:0;transform:scale(1.08);}to{opacity:1;transform:scale(1);}}
 
   /* ---------- SECTION SHARED ---------- */
   section{padding:110px 0;}
@@ -525,8 +526,10 @@
   <div class="hero-wave">
     <svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path fill="#FAF6F0" d="M0,40 C240,90 480,0 720,30 C960,60 1200,100 1440,50 L1440,100 L0,100 Z"></path></svg>
   </div>
-  <div class="hero-bg">
-    <img src="assets/promenade-des-anglais.png" alt="Illustration de la Promenade des Anglais à Nice">
+  <div class="hero-bg" id="heroBg">
+    <video src="assets/hero-bg.mp4" autoplay muted loop playsinline class="active"></video>
+    <video src="assets/hero-bg-2.mp4" muted loop playsinline></video>
+    <video src="assets/hero-bg-3.mp4" muted loop playsinline></video>
   </div>
 </header>
 
@@ -1029,6 +1032,24 @@
   lbImg.addEventListener('touchstart', (e) => { const t = e.touches[0]; dragStart(t.clientX, t.clientY); }, { passive:true });
   lbImg.addEventListener('touchmove', (e) => { const t = e.touches[0]; dragMove(t.clientX, t.clientY); }, { passive:true });
   lbImg.addEventListener('touchend', dragEnd);
+
+  // Carrousel vidéos hero
+  (function(){
+    const videos = document.querySelectorAll('#heroBg video');
+    if(videos.length < 2) return;
+    let current = 0;
+    let z = 2;
+    function next(){
+      current = (current + 1) % videos.length;
+      const nextVid = videos[current];
+      z++;
+      nextVid.style.zIndex = z;
+      nextVid.currentTime = 0;
+      nextVid.play().catch(()=>{});
+      nextVid.classList.add('active');
+    }
+    setInterval(next, 7000);
+  })();
 
   // WhatsApp form
   const WHATSAPP_NUMBER = "380506516816"; // numéro WhatsApp (différent du téléphone du salon)
