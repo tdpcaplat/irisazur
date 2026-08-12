@@ -1,32 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<template id="__bundler_thumbnail" data-bg-color="#0A2E45">
+  <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+    <rect width="200" height="140" fill="#0A2E45"/>
+    <text x="100" y="78" font-family="Georgia, serif" font-size="40" fill="#E4CBA8" text-anchor="middle">IA</text>
+  </svg>
+</template>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hairdresser Nice Carré d'Or | Iris Azur — Bespoke Hairdressing by Appointment</title>
-<meta name="description" content="Independent hairdresser in Nice, Carré d'Or. Cuts, colour, highlights, event styling and extensions. Iris Azur welcomes clients strictly by appointment, quick booking via WhatsApp.">
-<meta name="keywords" content="hairdresser Nice, hair salon Nice, Carré d'Or hairdresser, independent hairdresser Nice, hair colouring Nice, event hairstyling Nice">
+<title>Hairdresser Nice Carré d'Or | Iris Azur — Bespoke Hairstyling by Appointment</title>
+<meta name="description" content="Independent hairdresser in Nice, Carré d'Or. Haircuts, colour, highlights, event styling and extensions. Iris Azur sees clients strictly by appointment, quick booking via WhatsApp.">
+<meta name="keywords" content="hairdresser Nice, hair salon Nice, hair salon Carré d'Or, independent hairdresser Nice, hair colouring Nice, event hairstyling Nice">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Iris Azur">
 <link rel="canonical" href="https://irisazur.com/en/">
 <link rel="alternate" hreflang="fr" href="https://irisazur.com/">
-<link rel="alternate" hreflang="en" href="https://irisazur.com/en/">
 <link rel="alternate" hreflang="ru" href="https://irisazur.com/ru/">
+<link rel="alternate" hreflang="uk" href="https://irisazur.com/uk/">
+<link rel="alternate" hreflang="en" href="https://irisazur.com/en/">
 <link rel="alternate" hreflang="x-default" href="https://irisazur.com/">
 
 <!-- Open Graph / réseaux sociaux -->
 <meta property="og:type" content="business.business">
 <meta property="og:title" content="Iris Azur — Hairdresser Nice, Carré d'Or">
-<meta property="og:description" content="Bespoke hairdressing in Nice, Carré d'Or. Cuts, colour, event styling. By appointment only.">
+<meta property="og:description" content="Bespoke hairstyling in Nice, Carré d'Or. Haircuts, colour, event styling. By appointment only.">
 <meta property="og:image" content="https://irisazur.com/assets/logo.png">
 <meta property="og:url" content="https://irisazur.com/en/">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Iris Azur — Hairdresser Nice, Carré d'Or">
-<meta name="twitter:description" content="Bespoke hairdressing in Nice, Carré d'Or. By appointment only.">
+<meta name="twitter:description" content="Bespoke hairstyling in Nice, Carré d'Or. By appointment only.">
 <meta name="twitter:image" content="https://irisazur.com/assets/logo.png">
 
 <link rel="icon" type="image/png" href="../assets/logo.png">
+
+<style>
+@keyframes bgPulse { 0%,100%{background-position:0% 50%;} 50%{background-position:100% 50%;} }
+@keyframes floatY { 0%,100%{transform:translateY(0px) rotate(-0.6deg);} 50%{transform:translateY(-14px) rotate(0.6deg);} }
+@keyframes containerIn { 0%{opacity:0;transform:scale(0.85);} 100%{opacity:1;transform:scale(1);} }
+@keyframes ringDraw { 0%{stroke-dashoffset:1240;opacity:0;} 6%{opacity:1;} 30%{stroke-dashoffset:0;opacity:1;} 100%{stroke-dashoffset:0;opacity:1;} }
+@keyframes circleFill { 0%,24%{opacity:0;transform:scale(0.9);} 38%{opacity:1;transform:scale(1);} 100%{opacity:1;transform:scale(1);} }
+@keyframes hairReveal { 0%,32%{opacity:0;transform:translateY(18px);filter:blur(6px);} 50%{opacity:1;transform:translateY(0);filter:blur(0px);} 100%{opacity:1;transform:translateY(0);filter:blur(0px);} }
+@keyframes skylineRise { 0%,48%{opacity:0;transform:translateY(16px);} 64%{opacity:1;transform:translateY(0);} 100%{opacity:1;transform:translateY(0);} }
+@keyframes lotusBloom { 0%,60%{opacity:0;transform:scale(0.55) translateY(10px);transform-origin:245px 90px;} 80%{opacity:1;transform:scale(1.1) translateY(0);transform-origin:245px 90px;} 92%{transform:scale(0.97);transform-origin:245px 90px;} 100%{opacity:1;transform:scale(1);transform-origin:245px 90px;} }
+.logo-anim{position:relative;display:block;animation:containerIn 0.6s ease-out both;}
+.logo-anim svg{width:100%;height:100%;display:block;}
+.logo-anim circle{animation:circleFill 4.5s ease-out both;transform-origin:198.5px 198px;}
+.logo-anim .logo-ring{animation:ringDraw 4.5s ease-out both;}
+.logo-anim .logo-hair{animation:hairReveal 4.5s ease-out both;}
+.logo-anim .logo-lotus{animation:lotusBloom 4.5s ease-out both;}
+</style>
 
 <!-- Données structurées Schema.org : indispensable pour le SEO local (fiche Google) -->
 <script type="application/ld+json">
@@ -35,8 +59,7 @@
   "@type": "HairSalon",
   "name": "Iris Azur",
   "image": "https://irisazur.com/assets/logo.png",
-  "url": "https://irisazur.com/en/",
-  "inLanguage": "en",
+  "url": "https://irisazur.com/",
   "telephone": "+33749727187",
   "email": "contact@irisazur.com",
   "priceRange": "€€",
@@ -146,12 +169,14 @@
   }
   .nav.scrolled .nav-links a{color:var(--ink-soft);}
   .nav-links a:hover{border-bottom-color:currentColor;}
-  .nav-cta{
+  .nav-links a.nav-cta{
     background:var(--rose-gold);color:#fff !important;
     padding:10px 20px;border-radius:var(--radius);
     font-size:12px;letter-spacing:0.1em;
     border:none !important;line-height:1;
-    display:inline-flex;align-items:center;
+    display:inline-flex;align-items:center;justify-content:center;
+    align-self:center;
+    height:36px;
   }
   .nav-menu-btn{display:none;background:none;border:none;cursor:pointer;padding:6px;}
   .nav-menu-btn span{display:block;width:22px;height:2px;background:#fff;margin:5px 0;transition:.3s;}
@@ -184,10 +209,10 @@
       radial-gradient(circle at 82% 78%, rgba(79,168,216,0.14) 0%, transparent 45%);
     pointer-events:none;
   }
-  .hero-content{position:relative;z-index:2;max-width:760px;animation:heroIn 1.1s ease both;}
-  @keyframes heroIn{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+  .hero-content{position:relative;z-index:2;max-width:760px;transform:translateY(-20%);animation:heroIn 1.1s ease both;}
+  @keyframes heroIn{from{opacity:0;transform:translateY(calc(-20% + 18px));}to{opacity:1;transform:translateY(-20%);}}
   .hero-logo{
-    width:104px;height:104px;border-radius:50%;
+    width:104px;height:104px;
     margin:0 auto 30px;
     box-shadow:0 0 0 1px rgba(228,203,168,0.4), 0 20px 60px rgba(0,0,0,0.35);
   }
@@ -217,8 +242,13 @@
   .btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.35);}
   .btn-ghost:hover{border-color:#fff;transform:translateY(-2px);}
 
-  .hero-wave{position:absolute;bottom:-2px;left:0;width:100%;line-height:0;z-index:1;}
+  .hero-wave{position:absolute;bottom:-2px;left:0;width:100%;line-height:0;z-index:2;}
   .hero-wave svg{width:100%;height:auto;display:block;}
+  .hero-bg{position:absolute;inset:0;z-index:1;overflow:hidden;background:var(--navy-deep);}
+  .hero-bg::after{content:"";position:absolute;inset:0;z-index:5;background:rgba(7,29,44,0.12);}
+  .hero-bg video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%;opacity:0;transition:opacity 1.2s ease;}
+  .hero-bg video.active{opacity:1;animation:heroBgReveal 1.8s cubic-bezier(.22,.9,.3,1) both;}
+  @keyframes heroBgReveal{from{opacity:0;transform:scale(1.08);}to{opacity:1;transform:scale(1);}}
 
   /* ---------- SECTION SHARED ---------- */
   section{padding:110px 0;}
@@ -239,7 +269,7 @@
     display:flex;align-items:center;justify-content:center;
     overflow:hidden;
   }
-  .about-frame img{width:130px;height:130px;border-radius:50%;box-shadow:0 0 0 1px rgba(255,255,255,0.25);}
+  .about-frame img{width:130px;height:130px;box-shadow:0 0 0 1px rgba(255,255,255,0.25);border-radius:50%;}
   .about-frame::after{
     content:"";position:absolute;inset:14px;border:1px solid rgba(255,255,255,0.25);pointer-events:none;
   }
@@ -273,15 +303,84 @@
   }
   .g-tile{
     position:relative;overflow:hidden;border-radius:var(--radius);
-    background:linear-gradient(150deg,#12405F,var(--azure) 70%);
     display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;
   }
-  .g-tile:nth-child(3n+1){background:linear-gradient(150deg,var(--navy-deep),#1c5a80);}
-  .g-tile:nth-child(3n+2){background:linear-gradient(150deg,#2a6f98,var(--azure-light));}
+  .g-tile.placeholder{background:linear-gradient(150deg,#12405F,var(--azure) 70%);}
+  .g-tile.placeholder:nth-child(3n+1){background:linear-gradient(150deg,var(--navy-deep),#1c5a80);}
+  .g-tile.placeholder:nth-child(3n+2){background:linear-gradient(150deg,#2a6f98,var(--azure-light));}
   .g-tile:nth-child(1){grid-column:span 2;grid-row:span 2;}
   .g-tile svg{width:34px;height:34px;color:rgba(255,255,255,0.55);}
   .g-tile span{color:rgba(255,255,255,0.55);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;text-align:center;padding:0 10px;}
+  .g-tile.photo{cursor:zoom-in;background:var(--navy-deep);}
+  .g-tile.photo img,.g-tile.photo video{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+  .g-tile.photo:hover img,.g-tile.photo:hover video{transform:scale(1.05);}
+  .g-zoom-icon{
+    position:absolute;right:12px;bottom:12px;width:36px;height:36px;border-radius:50%;
+    background:rgba(10,46,69,0.55);backdrop-filter:blur(4px);
+    display:flex;align-items:center;justify-content:center;
+    opacity:0;transform:translateY(6px);transition:opacity .25s ease,transform .25s ease;
+    pointer-events:none;
+  }
+  .g-zoom-icon svg{width:16px;height:16px;color:#fff;}
+  .g-tile.photo:hover .g-zoom-icon,.g-tile.photo:focus-visible .g-zoom-icon{opacity:1;transform:translateY(0);}
+  .g-tile.photo .g-caption{
+    position:absolute;left:0;right:0;bottom:0;padding:22px 14px 12px;
+    background:linear-gradient(to top,rgba(7,29,44,0.88),rgba(7,29,44,0));
+    color:#fff;font-size:12.5px;letter-spacing:0.02em;text-transform:none;text-align:left;
+    font-weight:500;line-height:1.35;pointer-events:none;
+  }
+  .g-play-icon{
+    position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    background:rgba(10,46,69,0.25);
+  }
+  .g-play-icon svg{width:52px;height:52px;color:#fff;filter:drop-shadow(0 4px 10px rgba(0,0,0,0.4));transition:transform .25s ease;}
+  .g-tile.video:hover .g-play-icon svg{transform:scale(1.1);}
   .g-note{text-align:center;color:var(--ink-soft);font-size:13.5px;margin-top:26px;}
+
+  /* ---------- LIGHTBOX ---------- */
+  .lightbox{
+    position:fixed;inset:0;z-index:1000;background:rgba(7,29,44,0.94);
+    display:flex;align-items:center;justify-content:center;
+    opacity:0;visibility:hidden;transition:opacity .3s ease;
+  }
+  .lightbox.open{opacity:1;visibility:visible;}
+  .lightbox-stage{
+    width:100%;height:100%;display:flex;align-items:center;justify-content:center;
+    overflow:hidden;padding:70px 90px;
+  }
+  .lightbox-stage img{
+    max-width:100%;max-height:100%;object-fit:contain;border-radius:var(--radius);
+    box-shadow:0 30px 80px rgba(0,0,0,0.5);
+    cursor:zoom-in;transition:transform .25s ease;
+    touch-action:none;
+  }
+  .lightbox-stage video{
+    max-width:100%;max-height:100%;border-radius:var(--radius);
+    box-shadow:0 30px 80px rgba(0,0,0,0.5);
+  }
+  .lightbox-stage img.zoomed{cursor:grab;}
+  .lightbox-stage img.dragging{cursor:grabbing;transition:none;}
+  .lightbox-close,.lightbox-nav{
+    position:absolute;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);
+    color:#fff;border-radius:50%;width:46px;height:46px;display:flex;align-items:center;justify-content:center;
+    cursor:pointer;transition:background .2s ease;z-index:2;
+  }
+  .lightbox-close:hover,.lightbox-nav:hover{background:rgba(255,255,255,0.18);}
+  .lightbox-close svg,.lightbox-nav svg{width:20px;height:20px;}
+  .lightbox-close{top:24px;right:24px;}
+  .lightbox-nav.prev{left:24px;top:50%;transform:translateY(-50%);}
+  .lightbox-nav.next{right:24px;top:50%;transform:translateY(-50%);}
+  .lightbox-hint{
+    position:absolute;bottom:22px;left:50%;transform:translateX(-50%);
+    color:rgba(255,255,255,0.55);font-size:12px;letter-spacing:0.04em;
+  }
+  @media (max-width:640px){
+    .lightbox-stage{padding:60px 20px;}
+    .lightbox-nav{width:38px;height:38px;}
+    .lightbox-nav.prev{left:10px;}
+    .lightbox-nav.next{right:10px;}
+    .lightbox-hint{font-size:11px;padding:0 20px;text-align:center;}
+  }
 
   /* ---------- RENDEZ-VOUS ---------- */
   .rdv{background:var(--navy-deep);position:relative;overflow:hidden;}
@@ -289,7 +388,7 @@
     content:"";position:absolute;inset:0;
     background:radial-gradient(circle at 85% 20%, rgba(79,168,216,0.18), transparent 55%);
   }
-  .rdv-inner{position:relative;z-index:1;display:grid;grid-template-columns:0.9fr 1.1fr;gap:70px;align-items:start;}
+  .rdv-inner{position:relative;z-index:1;display:grid;grid-template-columns:0.9fr 1.1fr;gap:70px;align-items:center;}
   .rdv-left .eyebrow{color:var(--rose-gold-light);}
   .rdv-left h2{color:#fff;font-size:clamp(28px,3.6vw,38px);font-weight:400;margin:16px 0 20px;}
   .rdv-left p{color:rgba(255,255,255,0.72);font-size:15.5px;margin-bottom:26px;}
@@ -331,6 +430,8 @@
 
   /* ---------- RESPONSIVE ---------- */
   @media (max-width:860px){
+    .hero-content{transform:translateY(0);}
+    @keyframes heroIn{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
     .nav-links{position:fixed;top:0;right:0;height:100vh;width:78%;max-width:320px;
       background:var(--navy-deep);flex-direction:column;justify-content:center;align-items:flex-start;
       padding:0 40px;gap:26px;transform:translateX(100%);transition:transform .35s ease;}
@@ -341,7 +442,7 @@
     .about-frame{max-width:320px;margin:0 auto;}
     .p-grid{grid-template-columns:1fr;}
     .g-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px;}
-    .g-tile:nth-child(1){grid-column:span 2;grid-row:span 1;}
+    .g-tile.photo:nth-child(1){grid-column:span 2;grid-row:span 1;}
     .form-row{grid-template-columns:1fr;}
     section{padding:76px 0;}
   }
@@ -357,14 +458,15 @@
       <span class="nav-brand-text">IRIS AZUR</span>
     </a>
     <div class="nav-links" id="navLinks">
-      <a href="#about">About</a>
+      <a href="#about">The Studio</a>
       <a href="#prestations">Services</a>
       <a href="#galerie">Gallery</a>
       <a href="#rdv">Booking</a>
-      <a href="#rdv" class="nav-cta">Book now</a>
+      <a href="#rdv" class="nav-cta">Book</a>
       <div class="lang-switch">
         <a href="/">FR</a><span>·</span>
         <a href="/ru/">RU</a><span>·</span>
+        <a href="/uk/">UK</a><span>·</span>
         <a href="/en/" class="active">EN</a>
       </div>
     </div>
@@ -377,17 +479,59 @@
 <!-- ================= HERO ================= -->
 <header class="hero" id="top">
   <div class="hero-content">
-    <img src="../assets/logo.png" alt="Iris Azur — Bespoke Hairdressing Nice" class="hero-logo">
+    <div class="logo-anim" style="width:104px;height:104px;margin:110px auto 30px;filter:drop-shadow(0 8px 16px rgba(0,20,40,0.35));">
+      <svg viewBox="0 0 397 396" role="img" aria-label="Iris Azur — Fine Hairstyling Nice">
+        <defs>
+          <linearGradient id="blueGradHero" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#0f3a5f"></stop>
+            <stop offset="50%" stop-color="#1f6fa8"></stop>
+            <stop offset="100%" stop-color="#4fa3c9"></stop>
+          </linearGradient>
+          <linearGradient id="sandGradHero" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#C9A47C"></stop>
+            <stop offset="50%" stop-color="#DBBB98"></stop>
+            <stop offset="100%" stop-color="#E4CBA8"></stop>
+          </linearGradient>
+        </defs>
+        <circle cx="198.5" cy="198" r="192" fill="url(#blueGradHero)"></circle>
+        <g class="logo-ring">
+          <path fill="url(#sandGradHero)" d="M393.3,197.54c0,107.29-86.97,194.26-194.26,194.26S4.78,304.83,4.78,197.54,91.75,3.28,199.04,3.28s194.26,86.97,194.26,194.26ZM114,351.5c.56-5.2-.41-11.2,0-16.5-4.61-.5-6.65,3.95-9.99,6-.22-4.83,3.13-6.89,7-8.5l-11.01.49c2.16-3.08,6.6-5.08,9.99-2.99,1.99-2.05-5.92-4.38-5.99-5.99,5.67-1.26,7.18,2.05,10.97,4.99.61-3.82,5.69-5.11,9.02-4.99l-6,5.98c4.64-.2,8.17-.74,10.99,3.51l-10.99-1.49c3.89,3.1,7.25,3.89,6.99,9.99-2.99-2.68-5.15-7.14-9.99-6.99,2.61,8.35-.37,16.85-.04,25.32l4.55,2.65c2.48-.1,1.21-10.69,1.49-12.98h12.43s.57,11.01.57,11.01h5s-.99-5-.99-5h9s0,7,0,7l3-.02c-2.24-3.57-.1-6.78.04-10.45.31-7.96-.26-16.02-.11-23.99l2.88-.74.74-2.88,7.45.07v33.01s10.82.17,10.82.17c2.02,6.2-.61,12.39.18,18.82,1.26,1.65,1.82-.1,2-1.48.44-3.43-.34-7.45.01-11,.16-1.66,4.18-24.64,1.49-23.51l-8.51,5.98c.73-1.42,1.02-3.28,1.97-4.52,1.37-1.79,3.55-1.74,4.03-3.46l-7.99.49c2.73-3.3,5.01-3.95,8.99-2.51l-5.99-4.98c3.16-1.74,7.99,3.05,9.32,2.84,1.52-.24,4.5-4.22,7.67-2.85l-3.99,4.98c4.09-.51,6.58.14,8.99,3.51l-7.99-1.5c-.79,2.85,2.05,1.95,3.07,3.39s1.03,2.9.91,4.61l-7.98-4.99-1,34.99c1.09.19,1.9-.02,2.52-.98,1.9-2.94-3.18-16.61.98-20.02h16.5v22c2.58.33,2.83-1.56,3.05-3.45,1.34-11.36-1.51-22.8-2.09-34.01-.42-8.13.4-16.41.03-24.54l-5.95,2.54-8.03,8.45c-1.54-8.61,3.31-10.52,8.99-14.99l-16,1.98c3.89-6.27,9.92-9.01,16.99-5.99,1.79-2.08-8.24-7.87-9.98-8.01-.07-1.7,4.55-1.15,5.54-1.03,5.27.63,7.39,2.45,9.96,7.05h1.47c1.79-5.84,9.46-7.58,15.02-7l-11,8.98c5.63-1.23,8.97-1.87,13.93,1.58,1.35.94,5.16,4.1,3.57,5.43-4.17-2.83-10.5-2.85-15.51-2.98,4.74,4.39,10,7.37,8.99,14.99-5.13-3.5-8.28-10.03-14.98-11l2.99,59.5.94,2.06,3.06.44v-23.5c0-2.42,6.36-1.17,8-.5v-24.5c3.61-2.46,12.51-2.43,16,0v35.5l2.83-1.67.1-17.72,3.95-2.22.12-12.39c3.42-.87,2.78,1.52,4.59,2.9,1.94,1.48,3.41-.12,3.41,3.6v27.5h2v-36.5c0-3.21,10.4-8.59,14-6.5v22l6,1.5v18c0,.17,1.35,1.58,2,1.5v-29l9,1v23h3v-19h9v14c4.65.78,1.08-7.05,2-8l5.95.09.55,2.91c89.14-58.93,109.41-181,42.48-265.47C219.46-71.38-31.79,55.66,22.5,248c13.3,47.13,46.66,87.09,89,110.98.94-.04,2.37-6.33,2.49-7.48Z"></path>
+        </g>
+        <g class="logo-hair">
+          <path fill="url(#sandGradHero)" d="M135.58,184.42c8.56,8,18.16,14.41,28.4,20.1,6.46,3.59,13.99,6.07,19.81,10.19,8.38,27.11-7.29,53.02-24.78,72.29,4.68-22.27-6.26-53.29-32.51-53.79-8.95-.17-34.86,7.63-36.55-6.67-.62-5.27,2.24-9.94.62-15.63-.74-2.61-5.37-3.69-6.4-6.55l3.83-4.85c-10.34-7.01-4.18-5.81-2.39-11.48,2.2-6.99-10.75-7.43-12.13-14.95-.47-2.58,10.68-12.97,12.94-16.16,1.72-2.42,5.82-8.91,6.57-11.44.61-2.06-.56-1.23-1.5-1.45-2.48-.56-6.56-.13-6.48-4.03,13.31,5.41,6.91-11.41,6.9-18.5-.02-13.2,8.35-30.37,16.6-40.5-.34,6.11-3.21,11.61-4.23,17.77-5.35,32.24,8.07,63.92,31.31,85.64Z"></path>
+          <path fill="url(#sandGradHero)" d="M269,294.5c-8.83-100.13-149.41-71.09-158.87-174.13-1.54-16.73.87-37.68,10.86-51.37-13.11,30.5-7.31,63.83,13.03,89.48,24.54,30.96,64.16,35.41,95.9,55.1,36.46,22.62,51.02,53.49,41.59,96.43-.4,1.82-.85,6.13-2.51,6.99-.47-7.3.64-15.29,0-22.5Z"></path>
+          <path fill="url(#sandGradHero)" d="M128,70.01c-10.44,35.11,8.5,73.11,38.69,91.8,4.62,2.86,11.15,5.16,15.22,7.78,5.33,3.42,15.24,16.94,23.08,15,3.3-.82,8.21-5.54,11.35-5.54,4.16,0,11.52,2.31,16.28,2.83,27.8,2.99,55.93,3.69,78.85,22.15,2.27,1.83,18.31,18,16.51,19.98-19.93-17.88-43.16-26.61-69.62-29.87-37.06-4.57-66.9-2.49-99.3-25.7-29.17-20.89-47.16-61.35-33.32-96.23.61-1.53-.58-2.71,2.25-2.19Z"></path>
+          <path fill="url(#sandGradHero)" d="M250.99,278l-9.16-15.33c-1.68-5.23-31.93-29.75-34.83-26.67-2.74,42.34-46.25,62.87-67.84,94.67l-8.16,13.33c9.14-47.91,73.19-71.36,60.99-125.99,26.47,10.38,55.1,29.37,58.98,59.99Z"></path>
+          <path fill="url(#sandGradHero)" d="M322.99,267.99l-18.45-25.03c-11.68-9.89-25.09-19.36-39.75-24.25-9.27-3.09-16.5-2.05-22.87-11.13l-15.91-9.57c42.72,1.22,87.25,25.81,96.99,69.98Z"></path>
+          <path fill="url(#sandGradHero)" d="M293,182.99c-20.21-9.86-42.87-10.96-64.99-11.49l8.51-6.51c19.68,1.62,41.73,3.54,56.48,18Z"></path>
+        </g>
+        <g class="logo-lotus">
+          <path fill="url(#sandGradHero)" d="M203.01,148.99c1.3.27,1.61-1.86,1.74-2.73,1.82-12.04,1.76-25.38,2.21-37.6,3.75-3.76,14.29-.77,16.31,3.57,1.66,3.58.15,8.58,1.21,12.79,1.59,6.29,8.87,9.97,10.08,13.92,4.92,15.96-9.21,26.77-20.64,34.46s-11,6.72-21.85-.97c-8.83-6.25-19.21-14.39-20.05-25.96s7.25-11.97,10.04-19.93c2.62-7.47-2.2-15.21,8.39-18.6,15.34-4.91,9.79,9.7,10.52,19.6.52,7.11,2.49,14.24,2.05,21.45Z"></path>
+          <path fill="url(#sandGradHero)" d="M200,103c-9.01-9.27-20.29-23.91-20.07-37.51.25-15.67,14.83-28.28,21.62-41.44h1.91c5.15,9.1,13.39,17.69,18.06,26.94,9.82,19.45-2.81,37.32-15.02,52.01l-2.5-46.99c-2.37-.16-1.76-.32-1.99,1.49-.62,4.96-.59,10.08-.97,15.05-.1,1.29-1.04,2.62-1.04,2.96v27.5Z"></path>
+          <path fill="url(#sandGradHero)" d="M278,152.99c-7.94.28-16.93-.8-23.02-6.48-8.72-8.14-2.95-12.95-4.07-21.93-1.39-11.1-12.44-19.13-22.93-13.05l-3.98-5.52c13.94-6.35,28.96-2.13,37.99,9.99-4.22-12.9-15.82-18.63-28.99-17.01-.15-1.5,2.45-1.6,3.57-1.91,35.3-9.77,32.77,34.15,41.42,55.91Z"></path>
+          <path fill="url(#sandGradHero)" d="M232.99,25c5.68,18.48,19.33,31.91,9.39,51.87-5.85,11.74-17.15,20.86-28.36,27.13,4.34-10.05,12.36-18.47,15.29-29.2,4.23-15.44-1.4-23.2-9.97-35.29.05-.88,9.86-12.41,11.14-13.53.87-.77,1.12-1.29,2.51-.97Z"></path>
+          <path fill="url(#sandGradHero)" d="M186.99,38.02l-.03,1.43c-12.87,13.32-15.55,27.57-7.35,44.44,1.21,2.49,13.24,19.2,12.38,20.11-11.91-6.51-25.65-17.9-30.48-31.01-6.51-17.69,6.9-31.03,9.49-47.98,1.92-1.72,12.54,13.19,15.99,13.01Z"></path>
+          <path fill="url(#sandGradHero)" d="M173.99,98.01l-10.25,1.23c-5.62.94-14.96,7.82-16.72,13.28-.16.51-.27,1.63.48,1.48,8.48-10.79,24.96-14.39,36.5-6.49-5.02,5.5-9.12,1.58-15.44,2.56-6.68,1.04-10.83,8.34-11.45,14.54-.73,7.3,2.89,13.59-2.04,20.78l-2.05.61c-3.89-7.79-15.81-18.26-14.78-27.22,2.09-18.06,19.06-27.43,35.75-20.76Z"></path>
+          <path fill="url(#sandGradHero)" d="M258.99,48c-2.28,11.66,1.12,37.6-12.25,43.24-3.52,1.49-7.31-.09-10.74,1.75l7.82-9.67c6.71-8.83,6.98-19.71,5.61-30.32l9.55-5.01Z"></path>
+          <path fill="url(#sandGradHero)" d="M170,92.99c-2.98-1.17-6.51-.55-9.27-1.22-14.45-3.51-11.86-31.45-13.72-42.76l9.52,3.98c1.49,2.39-.9,7.39-.98,10.5-.33,13.03,6.08,20.6,14.45,29.5Z"></path>
+        </g>
+      </svg>
+    </div>
     <p class="hero-eyebrow">Nice · Carré d'Or</p>
-    <h1>The art of hairdressing,<br><em>tailored to you</em></h1>
-    <p>Iryna welcomes you in Nice, in the heart of Carré d'Or, for hair creations designed just for you — exceptional cuts, colour and styling, strictly by appointment.</p>
+    <h1>The art of hairstyling,<br><em>tailored to you</em></h1>
+    <p>Iryna welcomes you in Nice, in the heart of Carré d'Or, for hair creations designed around you — exceptional cuts, colour and styling, strictly by appointment.</p>
     <div class="hero-ctas">
       <a href="#rdv" class="btn btn-primary">Book an appointment</a>
-      <a href="#galerie" class="btn btn-ghost">View the work</a>
+      <a href="#galerie" class="btn btn-ghost">See the creations</a>
     </div>
   </div>
   <div class="hero-wave">
     <svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path fill="#FAF6F0" d="M0,40 C240,90 480,0 720,30 C960,60 1200,100 1440,50 L1440,100 L0,100 Z"></path></svg>
+  </div>
+  <div class="hero-bg" id="heroBg">
+    <video src="../assets/hero-bg.mp4" autoplay muted loop playsinline class="active"></video>
+    <video src="../assets/hero-bg-2.mp4" muted loop playsinline></video>
+    <video src="../assets/hero-bg-3.mp4" muted loop playsinline></video>
   </div>
 </header>
 
@@ -398,10 +542,10 @@
       <img src="../assets/logo.png" alt="Iris Azur, independent hair salon in Carré d'Or, Nice">
     </div>
     <div class="about-text">
-      <span class="eyebrow">The Iris Azur experience</span>
-      <h2>A hairdresser, a private address</h2>
-      <p>Located in the Carré d'Or district of Nice, Iryna guides each client through a personalised hair experience, away from the bustle of traditional salons.</p>
-      <p>Every appointment is designed as a special moment: attentive listening, expert advice and precise technique, for a natural, long-lasting result.</p>
+      <span class="eyebrow">The Iris Azur Studio</span>
+      <h2>One hairdresser, one private address</h2>
+      <p>Based in the Carré d'Or district of Nice, Iryna guides each client through a personalised hair experience, away from the bustle of classic salons.</p>
+      <p>Every appointment is designed as a privileged moment: attentive listening, expert advice and precise technique, in service of a natural, lasting result.</p>
       <div class="about-facts">
         <div class="about-fact">
           <span class="num">100%</span>
@@ -409,7 +553,7 @@
         </div>
         <div class="about-fact">
           <span class="num">Carré d'Or</span>
-          <span class="lbl">Nice city centre</span>
+          <span class="lbl">Central Nice</span>
         </div>
       </div>
     </div>
@@ -422,46 +566,58 @@
     <div class="section-head">
       <span class="eyebrow">Expertise</span>
       <h2>Services</h2>
-      <p>A range of services adapted to every hair type. Prices are provided on request, depending on hair length and condition.</p>
+      <p>A selection of services tailored to every type of hair. Prices are provided on request, depending on hair length and texture.</p>
     </div>
   </div>
   <div class="container">
     <div class="p-grid">
       <div class="p-card">
         <svg class="p-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3c-1.5 2-2 4-2 6a4 4 0 108 0c0-2-.5-4-2-6"/><path d="M6 15c0 4 2.5 6 6 6s6-2 6-6"/></svg>
-        <h3>Cut &amp; Blow-dry</h3>
-        <p>A cut tailored to your face shape, with careful styling and finishing.</p>
+        <h3>Haircut &amp; Blow-dry</h3>
+        <p>Personalised cut based on your face shape, careful styling and finishing.</p>
         <span class="price">Price on request</span>
       </div>
       <div class="p-card">
         <svg class="p-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="8"/><path d="M12 4v16M4 12h16"/></svg>
         <h3>Colour &amp; Highlights</h3>
-        <p>Bespoke colouring, balayage and highlights for natural-looking light.</p>
-        <span class="price">Tarif sur demande</span>
+        <p>Bespoke colouring, balayage and highlights for a natural glow.</p>
+        <span class="price">Price on request</span>
       </div>
       <div class="p-card">
         <svg class="p-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 20c2-4 4-6 8-6s6 2 8 6"/><circle cx="12" cy="8" r="4"/></svg>
         <h3>Event Styling</h3>
-        <p>Updos and hairstyles for weddings, evenings and special occasions.</p>
-        <span class="price">Tarif sur demande</span>
+        <p>Updos and styling for weddings, evenings out and special occasions.</p>
+        <span class="price">Price on request</span>
       </div>
       <div class="p-card">
         <svg class="p-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
-        <h3>Hair Care &amp; Treatments</h3>
-        <p>Diagnosis and targeted treatments to restore your hair's health.</p>
-        <span class="price">Tarif sur demande</span>
+        <h3>Hair Care &amp; Fibre Treatment</h3>
+        <p>Diagnosis and targeted treatments to restore healthy hair.</p>
+        <span class="price">Price on request</span>
       </div>
       <div class="p-card">
         <svg class="p-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2l1.8 5.6L19 9l-5.2 1.4L12 16l-1.8-5.6L5 9l5.2-1.4z"/></svg>
         <h3>Extensions</h3>
         <p>Extension application for length and volume, with a guaranteed natural effect.</p>
-        <span class="price">Tarif sur demande</span>
+        <span class="price">Price on request</span>
       </div>
       <div class="p-card">
         <svg class="p-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 4v16"/></svg>
-        <h3>Style Consultation</h3>
-        <p>A personal consultation to find the hairstyle that suits you best.</p>
+        <h3>Image Consultation</h3>
+        <p>A personalised conversation to define the style best suited to you.</p>
         <span class="price">Included with appointment</span>
+      </div>
+      <div class="p-card">
+        <svg class="p-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 18c2-8 4-12 8-12s6 4 8 12"/><path d="M8 18c1-5 2-7 4-7s3 2 4 7"/></svg>
+        <h3>Airtouch</h3>
+        <p>Warm-air colouring technique for a natural, seamless gradient.</p>
+        <span class="price">Price on request</span>
+      </div>
+      <div class="p-card">
+        <svg class="p-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 4v16M12 4v16M18 4v16" stroke-dasharray="1 3"/><path d="M4 8h16M4 16h16"/></svg>
+        <h3>Balayage</h3>
+        <p>Hand-painted lightening for a luminous, natural effect, strand by strand.</p>
+        <span class="price">Price on request</span>
       </div>
     </div>
   </div>
@@ -473,22 +629,183 @@
     <div class="section-head">
       <span class="eyebrow">Portfolio</span>
       <h2>Gallery</h2>
-      <p>A glimpse of Iryna's work. This gallery will soon be completed with photos of past creations.</p>
+      <p>A glimpse of Iryna's work. This gallery will be updated with more creations soon.</p>
     </div>
-    <div class="g-grid">
-      <div class="g-tile">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0112 6a5.5 5.5 0 019.5 6c-2.5 4.5-9.5 9-9.5 9z" opacity="0"/><path d="M12 3c-1.6 2.1-2.2 4.3-2.2 6.4a4.2 4.2 0 008.4 0c0-2.1-.6-4.3-2.2-6.4M7 15c0 4.2 2.6 6.3 6.3 6.3"/></svg>
-        <span>Photo coming soon</span>
+    <div class="g-grid" id="gGrid">
+      <div class="g-tile photo" data-full="../gallery/look-01-full.jpg" tabindex="0" role="button" aria-label="Enlarge photo 1">
+        <img src="../gallery/look-01-thumb.jpg" loading="lazy" alt="Natural blond balayage, back view — Iris Azur creation">
+        <span class="g-caption">Airtouch, no coverage of natural roots</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
       </div>
-      <div class="g-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 3c-1.6 2.1-2.2 4.3-2.2 6.4a4.2 4.2 0 008.4 0c0-2.1-.6-4.3-2.2-6.4M7 15c0 4.2 2.6 6.3 6.3 6.3"/></svg><span>Photo à venir</span></div>
-      <div class="g-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 3c-1.6 2.1-2.2 4.3-2.2 6.4a4.2 4.2 0 008.4 0c0-2.1-.6-4.3-2.2-6.4M7 15c0 4.2 2.6 6.3 6.3 6.3"/></svg><span>Photo à venir</span></div>
-      <div class="g-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 3c-1.6 2.1-2.2 4.3-2.2 6.4a4.2 4.2 0 008.4 0c0-2.1-.6-4.3-2.2-6.4M7 15c0 4.2 2.6 6.3 6.3 6.3"/></svg><span>Photo à venir</span></div>
-      <div class="g-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 3c-1.6 2.1-2.2 4.3-2.2 6.4a4.2 4.2 0 008.4 0c0-2.1-.6-4.3-2.2-6.4M7 15c0 4.2 2.6 6.3 6.3 6.3"/></svg><span>Photo à venir</span></div>
-      <div class="g-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 3c-1.6 2.1-2.2 4.3-2.2 6.4a4.2 4.2 0 008.4 0c0-2.1-.6-4.3-2.2-6.4M7 15c0 4.2 2.6 6.3 6.3 6.3"/></svg><span>Photo à venir</span></div>
+      <div class="g-tile photo" data-full="../gallery/look-02-full.jpg" tabindex="0" role="button" aria-label="Enlarge photo 2">
+        <img src="../gallery/look-02-thumb.jpg" loading="lazy" alt="Sleek, glossy hairstyle, side view — Iris Azur creation">
+        <span class="g-caption">Airtouch and toning gloss</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="../gallery/look-03-full.jpg" tabindex="0" role="button" aria-label="Enlarge photo 3">
+        <img src="../gallery/look-03-thumb.jpg" loading="lazy" alt="Luminous cool blond, back view — Iris Azur creation">
+        <span class="g-caption">Cool blond colour, luminous gloss</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="../gallery/look-04-full.jpg" tabindex="0" role="button" aria-label="Enlarge photo 4">
+        <img src="../gallery/look-04-thumb.jpg" loading="lazy" alt="Wavy honey-brown balayage, back view — Iris Azur creation">
+        <span class="g-caption">Honey-brown balayage, curling-iron waves</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="../gallery/look-05-full.jpg" tabindex="0" role="button" aria-label="Enlarge photo 5">
+        <img src="../gallery/look-05-thumb.jpg" loading="lazy" alt="Curled evening hairstyle, golden blond ombré — Iris Azur creation">
+        <span class="g-caption">Evening curls, golden blond ombré</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="../gallery/look-07-full.jpg" tabindex="0" role="button" aria-label="Enlarge photo 7">
+        <img src="../gallery/look-07-thumb.jpg" loading="lazy" alt="Before / after: smoothed blow-dry and brown curls — Iris Azur creation">
+        <span class="g-caption">Airtouch relief</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="../gallery/look-08-full.jpg" tabindex="0" role="button" aria-label="Enlarge photo 8">
+        <img src="../gallery/look-08-thumb.jpg" loading="lazy" alt="Long bob in icy brown, side view — Iris Azur creation">
+        <span class="g-caption">Long bob cut, icy brown colour</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="../gallery/look-09-full.jpg" tabindex="0" role="button" aria-label="Enlarge photo 9">
+        <img src="../gallery/look-09-thumb.jpg" loading="lazy" alt="Before / after: cool blond balayage, back view — Iris Azur creation">
+        <span class="g-caption">Before / after: cool blond balayage</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="../gallery/look-10-full.jpg" tabindex="0" role="button" aria-label="Enlarge photo 10">
+        <img src="../gallery/look-10-thumb.jpg" loading="lazy" alt="Before / after: caramel-brown ombré balayage, back view — Iris Azur creation">
+        <span class="g-caption">Before / after: caramel-brown ombré balayage</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="../gallery/look-11-full.jpg" tabindex="0" role="button" aria-label="Enlarge photo 11">
+        <img src="../gallery/look-11-thumb.jpg" loading="lazy" alt="Golden blond hairstyle, half-up style, profile — Iris Azur creation">
+        <span class="g-caption">Golden blond colour, half-up style</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="../gallery/look-12-full.jpg" tabindex="0" role="button" aria-label="Enlarge photo 12">
+        <img src="../gallery/look-12-thumb.jpg" loading="lazy" alt="Platinum blond bob, comb finish — Iris Azur creation">
+        <span class="g-caption">Platinum lightening, bob cut</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="../gallery/look-06-full.jpg" tabindex="0" role="button" aria-label="Enlarge photo 13">
+        <img src="../gallery/look-06-thumb.jpg" loading="lazy" alt="Colourful lilac and pink braids, back view — Iris Azur creation">
+        <span class="g-caption">Creative braids, lilac and pink colour</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="../gallery/look-14-full.jpg" tabindex="0" role="button" aria-label="Enlarge photo 14">
+        <img src="../gallery/look-14-thumb.jpg" loading="lazy" alt="Blond balayage, vue de dos — Iris Azur creation">
+        <span class="g-caption">Blond balayage, glossy blow-dry</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="../gallery/look-15-full.jpg" tabindex="0" role="button" aria-label="Enlarge photo 15">
+        <img src="../gallery/look-15-thumb.jpg" loading="lazy" alt="Cornrows for a child, top view — Iris Azur creation">
+        <span class="g-caption">Cornrows, children's hairstyle</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="../gallery/look-16-full.jpg" tabindex="0" role="button" aria-label="Enlarge photo 16">
+        <img src="../gallery/look-16-thumb.jpg" loading="lazy" alt="Wavy blond, back view — Iris Azur creation">
+        <span class="g-caption">Wavy blow-dry, natural blond</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="../gallery/look-17-full.jpg" tabindex="0" role="button" aria-label="Enlarge photo 17">
+        <img src="../gallery/look-17-thumb.jpg" loading="lazy" alt="Smoothed hair with subtle balayage, side view — Iris Azur creation">
+        <span class="g-caption">Glossy smoothing, subtle balayage</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="../gallery/look-18-full.jpg" tabindex="0" role="button" aria-label="Enlarge photo 18">
+        <img src="../gallery/look-18-thumb.jpg" loading="lazy" alt="Layered brown cut, back view — Iris Azur creation">
+        <span class="g-caption">Layered cut, volume blow-dry</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="../gallery/look-19-full.jpg" tabindex="0" role="button" aria-label="Enlarge photo 19">
+        <img src="../gallery/look-19-thumb.jpg" loading="lazy" alt="Wavy caramel balayage, side view — Iris Azur creation">
+        <span class="g-caption">Caramel balayage, waves</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="../gallery/look-20-full.jpg" tabindex="0" role="button" aria-label="Enlarge photo 20">
+        <img src="../gallery/look-20-thumb.jpg" loading="lazy" alt="Blond highlights, layered cut, back view — Iris Azur creation">
+        <span class="g-caption">Blond balayage, layered cut</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="../gallery/look-21-full.jpg" tabindex="0" role="button" aria-label="Enlarge photo 21">
+        <img src="../gallery/look-21-thumb.jpg" loading="lazy" alt="Blond ombré colour, back view — Iris Azur creation">
+        <span class="g-caption">Ombré colour, smoothing blow-dry</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="../gallery/look-22-full.jpg" tabindex="0" role="button" aria-label="Enlarge photo 22">
+        <img src="../gallery/look-22-thumb.jpg" loading="lazy" alt="Blond balayage, side view — Iris Azur creation">
+        <span class="g-caption">Blond balayage, glossy smoothing</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="../gallery/look-23-full.jpg" tabindex="0" role="button" aria-label="Enlarge photo 23">
+        <img src="../gallery/look-23-thumb.jpg" loading="lazy" alt="Smoothed cool blond, side view — Iris Azur creation">
+        <span class="g-caption">Airtouch for natural hair</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="../gallery/look-24-full.jpg" tabindex="0" role="button" aria-label="Enlarge photo 24">
+        <img src="../gallery/look-24-thumb.jpg" loading="lazy" alt="Cornrows for a child, back view — Iris Azur creation">
+        <span class="g-caption">Cornrows, children's hairstyle</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="../gallery/look-25-full.jpg" tabindex="0" role="button" aria-label="Enlarge photo 25">
+        <img src="../gallery/look-25-thumb.jpg" loading="lazy" alt="Golden blond bob cut, back view — Iris Azur creation">
+        <span class="g-caption">Balayage</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="../gallery/look-26-full.jpg" tabindex="0" role="button" aria-label="Enlarge photo 26">
+        <img src="../gallery/look-26-thumb.jpg" loading="lazy" alt="Beige balayage, smoothed length, back view — Iris Azur creation">
+        <span class="g-caption">Beige balayage, length smoothing</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="../gallery/look-27-full.jpg" tabindex="0" role="button" aria-label="Enlarge photo 27">
+        <img src="../gallery/look-27-thumb.jpg" loading="lazy" alt="Layered chestnut cut, back view — Iris Azur creation">
+        <span class="g-caption">Contouring layered cut, honey volume blow-dry</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="../gallery/look-28-full.jpg" tabindex="0" role="button" aria-label="Enlarge photo 28">
+        <img src="../gallery/look-28-thumb.jpg" loading="lazy" alt="Copper colour, layered cut, side view — Iris Azur creation">
+        <span class="g-caption">Airtouch Rose Gold</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="../gallery/look-29-full.jpg" tabindex="0" role="button" aria-label="Enlarge photo 29">
+        <img src="../gallery/look-29-thumb.jpg" loading="lazy" alt="Deep bob cut, platinum blond, back view — Iris Azur creation">
+        <span class="g-caption">Deep bob cut, platinum blond</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo" data-full="../gallery/look-30-full.jpg" tabindex="0" role="button" aria-label="Enlarge photo 30">
+        <img src="../gallery/look-30-thumb.jpg" loading="lazy" alt="Layered brown cut, side view — Iris Azur creation">
+        <span class="g-caption">Tone-on-tone colour, cool brown</span>
+        <span class="g-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="g-tile photo video" data-video="../gallery/look-13.mp4" tabindex="0" role="button" aria-label="Watch video">
+        <video src="../gallery/look-13.mp4" muted playsinline preload="metadata"></video>
+        <span class="g-play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+      </div>
+      <div class="g-tile photo video" data-video="../gallery/look-14.mp4" tabindex="0" role="button" aria-label="Watch video">
+        <video src="../gallery/look-14.mp4" muted playsinline preload="metadata"></video>
+        <span class="g-play-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+      </div>
     </div>
-    <p class="g-note">Follow the latest work on Instagram <a href="https://instagram.com/iris_azur_nice" target="_blank" rel="noopener" style="color:var(--azure);font-weight:700;">@iris_azur_nice</a></p>
+    <p class="g-note">Follow the latest creations on Instagram <a href="https://instagram.com/iris_azur_nice" target="_blank" rel="noopener" style="color:var(--azure);font-weight:700;">@iris_azur_nice</a></p>
   </div>
 </section>
+
+<!-- ================= LIGHTBOX ================= -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" id="lbClose" aria-label="Close">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <button class="lightbox-nav prev" id="lbPrev" aria-label="Previous photo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <div class="lightbox-stage" id="lbStage">
+    <img id="lbImg" src="" alt="Iris Azur creation, full size">
+  </div>
+  <button class="lightbox-nav next" id="lbNext" aria-label="Next photo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+  <span class="lightbox-hint" id="lbHint">Click to zoom · drag to pan</span>
+</div>
 
 <!-- ================= RENDEZ-VOUS ================= -->
 <section class="rdv" id="rdv">
@@ -510,6 +827,10 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
           <span>25 Rue Gubernatis, 06000 Nice</span>
         </div>
+        <div class="rdv-info-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          <span>Monday to Saturday, 10am to 6pm</span>
+        </div>
       </div>
       <div class="rdv-note">The salon operates strictly by appointment — no walk-ins without prior confirmation.</div>
     </div>
@@ -522,17 +843,19 @@
         </div>
         <div class="field">
           <label for="tel">Phone</label>
-          <input type="tel" id="tel" name="tel" required placeholder="+33 6 00 00 00 00">
+          <input type="tel" id="tel" name="tel" required placeholder="06 00 00 00 00">
         </div>
       </div>
       <div class="field">
-        <label for="prestation">Desired service</label>
+        <label for="prestation">Requested service</label>
         <select id="prestation" name="prestation">
-          <option>Cut &amp; Blow-dry</option>
+          <option>Haircut &amp; Blow-dry</option>
           <option>Colour &amp; Highlights</option>
           <option>Event Styling</option>
-          <option>Hair Care &amp; Treatments</option>
+          <option>Hair Care &amp; Fibre Treatment</option>
           <option>Extensions</option>
+          <option>Airtouch</option>
+          <option>Balayage</option>
           <option>Other / Consultation</option>
         </select>
       </div>
@@ -548,7 +871,7 @@
       </div>
       <div class="field">
         <label for="message">Message (optional)</label>
-        <textarea id="message" name="message" placeholder="Add any details about your request..."></textarea>
+        <textarea id="message" name="message" placeholder="Details about your request..."></textarea>
       </div>
       <button type="submit" class="btn btn-primary form-submit">Send via WhatsApp</button>
       <p class="form-fine">You will be redirected to WhatsApp with your request pre-filled.</p>
@@ -564,7 +887,7 @@
         <img src="../assets/logo.png" alt="Iris Azur, hairdresser in Nice Carré d'Or">
         <div>
           <div class="footer-brand-name">IRIS AZUR</div>
-          <div class="footer-brand-sub">Bespoke Hairdressing · Nice</div>
+          <div class="footer-brand-sub">Fine Hairstyling · Nice</div>
         </div>
       </div>
       <div class="footer-cols">
@@ -580,16 +903,16 @@
           <a href="https://wa.me/380506516816" target="_blank" rel="noopener">WhatsApp</a>
         </div>
         <div class="footer-col">
-          <h4>Menu</h4>
-          <a href="#about">About</a>
+          <h4>Navigation</h4>
+          <a href="#about">The Studio</a>
           <a href="#prestations">Services</a>
           <a href="#rdv">Booking</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Iris Azur — Bespoke Hairdressing Nice. By appointment only.</p>
-      <p>Website crafted to order.</p>
+      <p>© 2026 Iris Azur — Fine Hairstyling Nice. By appointment only.</p>
+      <p>Website crafted bespoke.</p>
     </div>
   </div>
 </footer>
@@ -606,6 +929,147 @@
   const navLinks = document.getElementById('navLinks');
   menuBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
   navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  // Galerie — lightbox avec zoom
+  const galleryImages = Array.from(document.querySelectorAll('.g-tile.photo')).map(t => ({
+    full: t.dataset.full,
+    video: t.dataset.video,
+    alt: t.querySelector('img') ? t.querySelector('img').alt : 'Iris Azur video'
+  }));
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  const lbStage = document.getElementById('lbStage');
+  const lbHint = document.getElementById('lbHint');
+  let lbVideo = null;
+  let lbIndex = 0;
+  let zoomed = false, scale = 1, panX = 0, panY = 0, dragging = false, startX = 0, startY = 0;
+
+  function stopVideo(){
+    if(lbVideo){ lbVideo.pause(); lbVideo.remove(); lbVideo = null; }
+  }
+
+  function resetZoom(){
+    zoomed = false; scale = 1; panX = 0; panY = 0;
+    lbImg.style.transform = 'translate(0,0) scale(1)';
+    lbImg.classList.remove('zoomed','dragging');
+    lbHint.textContent = 'Click to zoom · drag to pan';
+  }
+
+  function renderItem(i){
+    stopVideo();
+    const item = galleryImages[i];
+    if(item.video){
+      lbImg.style.display = 'none';
+      lbVideo = document.createElement('video');
+      lbVideo.src = item.video;
+      lbVideo.controls = true;
+      lbVideo.autoplay = true;
+      lbVideo.playsInline = true;
+      lbStage.appendChild(lbVideo);
+      lbHint.textContent = '';
+    } else {
+      lbImg.style.display = '';
+      lbImg.src = item.full;
+      lbImg.alt = item.alt;
+      resetZoom();
+    }
+  }
+
+  function openLightbox(i){
+    lbIndex = i;
+    renderItem(i);
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox(){
+    stopVideo();
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+  }
+  function showRelative(delta){
+    lbIndex = (lbIndex + delta + galleryImages.length) % galleryImages.length;
+    renderItem(lbIndex);
+  }
+
+  document.querySelectorAll('.g-tile.photo').forEach((tile, i) => {
+    tile.addEventListener('click', () => openLightbox(i));
+    tile.addEventListener('keydown', (e) => { if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); openLightbox(i); } });
+  });
+
+  document.getElementById('lbClose').addEventListener('click', closeLightbox);
+  document.getElementById('lbPrev').addEventListener('click', () => showRelative(-1));
+  document.getElementById('lbNext').addEventListener('click', () => showRelative(1));
+  lightbox.addEventListener('click', (e) => { if(e.target === lightbox || e.target === lbStage) closeLightbox(); });
+
+  document.addEventListener('keydown', (e) => {
+    if(!lightbox.classList.contains('open')) return;
+    if(e.key === 'Escape') closeLightbox();
+    if(e.key === 'ArrowLeft') showRelative(-1);
+    if(e.key === 'ArrowRight') showRelative(1);
+  });
+
+  lbImg.addEventListener('click', (e) => {
+    if(dragging) return;
+    if(!zoomed){
+      zoomed = true; scale = 2.2;
+      lbImg.classList.add('zoomed');
+      lbHint.textContent = 'Drag to pan · click to shrink';
+      lbImg.style.transform = `translate(${panX}px,${panY}px) scale(${scale})`;
+    } else {
+      resetZoom();
+    }
+  });
+
+  lbImg.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    zoomed = true;
+    scale = Math.min(4, Math.max(1, scale - e.deltaY * 0.0015 * scale));
+    if(scale <= 1.02){ resetZoom(); return; }
+    lbImg.classList.add('zoomed');
+    lbImg.style.transform = `translate(${panX}px,${panY}px) scale(${scale})`;
+  }, { passive:false });
+
+  function dragStart(x, y){
+    if(!zoomed) return;
+    dragging = true;
+    startX = x - panX; startY = y - panY;
+    lbImg.classList.add('dragging');
+  }
+  function dragMove(x, y){
+    if(!dragging) return;
+    panX = x - startX; panY = y - startY;
+    lbImg.style.transform = `translate(${panX}px,${panY}px) scale(${scale})`;
+  }
+  function dragEnd(){
+    dragging = false;
+    lbImg.classList.remove('dragging');
+  }
+  lbImg.addEventListener('mousedown', (e) => { e.preventDefault(); dragStart(e.clientX, e.clientY); });
+  window.addEventListener('mousemove', (e) => dragMove(e.clientX, e.clientY));
+  window.addEventListener('mouseup', dragEnd);
+  lbImg.addEventListener('touchstart', (e) => { const t = e.touches[0]; dragStart(t.clientX, t.clientY); }, { passive:true });
+  lbImg.addEventListener('touchmove', (e) => { const t = e.touches[0]; dragMove(t.clientX, t.clientY); }, { passive:true });
+  lbImg.addEventListener('touchend', dragEnd);
+
+  // Carrousel vidéos hero
+  (function(){
+    const videos = document.querySelectorAll('#heroBg video');
+    if(videos.length < 2) return;
+    let current = 0;
+    let z = 2;
+    function next(){
+      current = (current + 1) % videos.length;
+      const nextVid = videos[current];
+      z++;
+      nextVid.style.zIndex = z;
+      nextVid.currentTime = 0;
+      nextVid.play().catch(()=>{});
+      nextVid.classList.add('active');
+    }
+    setInterval(next, 7000);
+  })();
 
   // WhatsApp form
   const WHATSAPP_NUMBER = "380506516816"; // numéro WhatsApp (différent du téléphone du salon)
